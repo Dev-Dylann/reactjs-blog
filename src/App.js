@@ -92,7 +92,10 @@ function App() {
             path="/post/:id"
             element={<PostPage posts={posts} handleDelete={handleDelete} />}
           />
-          <Route path="*" element={<MissingPage />} />
+          <Route
+            path="*"
+            element={<MissingPage setActiveTab={setActiveTab} />}
+          />
         </Routes>
       </main>
 
