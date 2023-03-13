@@ -12,7 +12,7 @@ const NewPost = ({ title, body, setTitle, setBody, handleCreatePost }) => {
         <input
           id="title"
           type="text"
-          className="my-1 rounded-lg border p-2 "
+          className="my-1 rounded-lg border p-2 dark:bg-slate-400"
           autoFocus
           required
           value={title}
@@ -26,7 +26,7 @@ const NewPost = ({ title, body, setTitle, setBody, handleCreatePost }) => {
           id="body"
           cols="30"
           rows="10"
-          className="my-1 resize-none rounded-lg border p-2"
+          className="my-1 resize-none rounded-lg border p-2 dark:bg-slate-400"
           value={body}
           onChange={(e) => setBody(e.target.value)}
         ></textarea>

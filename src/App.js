@@ -67,8 +67,8 @@ function App() {
   };
 
   return (
-    <div className="flex h-full flex-col font-poppins text-slate-800">
-      <header className="space-y-4 border-b p-4 pb-0">
+    <div className="flex h-full flex-col">
+      <header className="sticky top-0 left-0 space-y-4 border-b bg-transparent p-4 pb-0 backdrop-blur">
         <Header />
         <Nav activeTab={activeTab} setActiveTab={setActiveTab} />
       </header>

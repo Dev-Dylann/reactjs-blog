@@ -28,7 +28,11 @@ const Nav = ({ activeTab, setActiveTab }) => {
                 : {}
             }
           >
-            <Link onClick={() => setActiveTab(tab.index)} to={tab.path}>
+            <Link
+              className="font-medium"
+              onClick={() => setActiveTab(tab.index)}
+              to={tab.path}
+            >
               {tab.title}
             </Link>
           </li>
