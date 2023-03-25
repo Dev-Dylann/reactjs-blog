@@ -5,3 +5,15 @@
 html {
     height: -webkit-fill-available;
 }
+
+::-webkit-scrollbar {
+    width: 2px;
+}
+
+::-webkit-scrollbar {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #bbb;
+}

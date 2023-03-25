@@ -53,8 +53,6 @@ function App() {
     e.preventDefault();
 
     const id = posts.length ? posts[posts.length - 1].id + 1 : 1;
-    console.log(posts[posts.length - 1]);
-    console.log(id);
     const datetime = format(new Date(), `MMMM dd, yyyy pp`);
     const newPost = { id, datetime, title, body };
     const postList = [...posts, newPost];
@@ -67,13 +65,13 @@ function App() {
   };
 
   return (
-    <div className="flex h-full flex-col">
-      <header className="sticky top-0 left-0 space-y-4 border-b bg-transparent p-4 pb-0 backdrop-blur">
+    <div className="flex h-full flex-col md:min-h-screen md:px-4">
+      <header className="sticky top-0 left-0 space-y-4 border-b bg-transparent p-4 pb-0 backdrop-blur md:absolute md:h-full md:w-1/3 md:divide-y md:border-r md:border-b-0 md:px-0">
         <Header />
         <Nav activeTab={activeTab} setActiveTab={setActiveTab} />
       </header>
 
-      <main className="flex-grow">
+      <main className="flex-grow md:w-2/3 md:self-end">
         <Routes>
           <Route path="/" element={<Posts posts={posts} />} />
           <Route
@@ -92,10 +90,7 @@ function App() {
             path="/post/:id"
             element={<PostPage posts={posts} handleDelete={handleDelete} />}
           />
-          <Route
-            path="*"
-            element={<MissingPage setActiveTab={setActiveTab} />}
-          />
+          <Route path="*" element={<MissingPage />} />
         </Routes>
       </main>
 

@@ -8,7 +8,9 @@ const PostPage = ({ posts, handleDelete }) => {
 
   return (
     <section className="p-4">
-      <h2 className="text-xl font-bold">{post.title}</h2>
+      <h1 className="my-4 hidden text-2xl font-bold md:block">Post</h1>
+
+      <h2 className="text-xl font-bold md:mt-10">{post.title}</h2>
       <p className="text-sm font-light text-slate-500">{post.datetime}</p>
 
       <article className="my-4">
@@ -17,7 +19,7 @@ const PostPage = ({ posts, handleDelete }) => {
 
       <button
         type="button"
-        className="mt-2 rounded-lg bg-red-600 p-2 px-4 text-slate-50"
+        className="mt-2 rounded-lg bg-red-600 p-2 px-4 text-slate-50 hover:brightness-110"
         onClick={() => handleDelete(id)}
       >
         <FaTrash className="inline" /> Delete Post

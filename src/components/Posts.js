@@ -18,7 +18,9 @@ const Home = ({ posts }) => {
   }, [search, posts]);
 
   return (
-    <section className="p-4 ">
+    <section className="overflow-y-auto p-4 md:h-screen">
+      <h1 className="my-4 hidden text-2xl font-bold md:block">Posts</h1>
+
       <SearchPosts search={search} setSearch={setSearch} />
 
       {searchResults.length ? (
