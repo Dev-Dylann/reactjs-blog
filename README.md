@@ -20,7 +20,7 @@ View [Live Site](https://devdylann-reactjsblog.netlify.app)
 
 ## Screenshot
 
-![Screenshot]()
+![Screenshot](./public/screenshot.png)
 
 ## Built with
 
